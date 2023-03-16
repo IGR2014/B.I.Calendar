@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include <winuser.h>
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+500 MENU
+BEGIN
+    POPUP "&Calendar"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "&Show",                       IDM_SHOW
+        MENUITEM "Minimize to &Tray",           IDM_HIDE
+        MENUITEM "Minimize to Task &Bar",       IDM_HIDETB
+        MENUITEM SEPARATOR
+        POPUP "&Languages"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        POPUP "&Help"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "&About...",                   IDM_ABOUT
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tAlt-F4",              IDM_CLOSE
+        MENUITEM SEPARATOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG DIALOG 0, 0, 300, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE
+CAPTION "B.I.Calendar: About..."
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Version:",IDC_TEXT2,100,50,60,15,NOT WS_GROUP
+    LTEXT           "Creation date:",IDC_TEXT3,100,80,100,15,NOT WS_GROUP
+    LTEXT           "Autor:",IDC_TEXT,100,110,70,15,NOT WS_GROUP
+    LTEXT           "0.1.6.310",IDC_TEXT5,249,50,70,15,NOT WS_GROUP
+    LTEXT           "02.01.2012   12:47",IDC_TEXT6,205,80,130,15,NOT WS_GROUP
+    PUSHBUTTON      "Igor Baklikov © 2011",ID_LINK,185,108,110,15,WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,5,130,290,2
+    LTEXT           "This program and all her parts are completely free!!!",IDC_TEXT7,10,137,120,20,NOT WS_GROUP
+    PUSHBUTTON      "ReadMe.txt",ID_AB,140,137,70,17,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,220,137,70,17
+END
+
+IDD_ERROR DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE
+CAPTION "B.I.Calendar: ERROR!!!"
+FONT 8, "Arial"
+BEGIN
+    LTEXT           "This language has been selected! Please choose another one...",IDC_TEXT,70,12,220,40,NOT WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,5,54,290,1
+    DEFPUSHBUTTON   "OK",IDOK,210,59,80,17
+END
+
+IDD_WARNING DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE
+CAPTION "B.I.Calendar: WARNING!!!"
+FONT 8, "Arial"
+BEGIN
+    LTEXT           "One version of this application is already running!!!",IDC_TEXT,75,12,200,40,NOT WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,5,54,290,1
+    DEFPUSHBUTTON   "OK",IDOK,210,59,80,17
+END
+
+IDD_EEG DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE
+CAPTION "B.I.Calendar: EaStEr EgG_)))"
+FONT 8, "Arial"
+BEGIN
+    LTEXT           "Today is autor`s birthday_)))",IDC_T,77,20,270,50,NOT WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,5,54,290,1
+    DEFPUSHBUTTON   "Hurray!!!",IDOK,210,59,80,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+APPICON                 ICON                    "pro2.ico"
+
+APPICONSM               ICON                    "pro2sm.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+ERROR                   BITMAP                  "Images\\error.bmp"
+
+ABOUT                   BITMAP                  "Images\\about.bmp"
+
+WARN                    BITMAP                  "Images\\warning.bmp"
+
+EGG                     BITMAP                  "Images\\eegg.bmp"
+
+LNG                     BITMAP                  "Images\\lng.bmp"
+
+LNGUN                   BITMAP                  "Images\\lngun.bmp"
+
+LNGM                    BITMAP                  "Images\\lngM.bmp"
+
+SHOW                    BITMAP                  "Images\\show.bmp"
+
+HIDE                    BITMAP                  "Images\\hide.bmp"
+
+CLOSE                   BITMAP                  "Images\\close.bmp"
+
+TRAY                    BITMAP                  "Images\\tray.bmp"
+
+HELP                    BITMAP                  "Images\\help.bmp"
+
+EGGY                    BITMAP                  "Images\\egg.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "B.I.Calendar.exe.Manifest"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 0,1,9,312
+ PRODUCTVERSION 0,1,9,312
+ FILEFLAGSMASK 0x0L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904e4"
+        BEGIN
+            VALUE "CompanyName", "Игорь Баклыков © 2011-2012"
+            VALUE "FileDescription", "Календарь на текущий месяц"
+            VALUE "FileVersion", "0.1.9.312"
+            VALUE "InternalName", "B.I.Calendar"
+            VALUE "LegalCopyright", "Игорь Баклыков © 2011-2012"
+            VALUE "LegalTrademarks", "B.I.  Codings © 2011-2012"
+            VALUE "OriginalFilename", "B.I.Calendar.exe"
+            VALUE "ProductName", "B.I.Calendar"
+            VALUE "ProductVersion", "0.9"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1252
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

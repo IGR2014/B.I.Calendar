@@ -1,0 +1,78 @@
+#include <windows.h>
+#include "menu.h"
+
+500 MENU LOADONCALL
+    {
+         POPUP "&Calendar"
+         {
+              MENUITEM SEPARATOR
+              MENUITEM "&Show", IDM_SHOW
+              MENUITEM "Minimize to &Tray", IDM_HIDE
+              MENUITEM "Minimize to Task &Bar", IDM_HIDETB
+              MENUITEM SEPARATOR
+              POPUP "&Languages"
+              {
+                    MENUITEM SEPARATOR
+              }
+              POPUP "&Help"
+              {
+                     MENUITEM SEPARATOR
+                     MENUITEM "&About...", IDM_ABOUT
+                     MENUITEM SEPARATOR
+              }
+              MENUITEM SEPARATOR
+              MENUITEM "&Close\tAlt-F4", IDM_CLOSE
+              MENUITEM SEPARATOR
+         }
+    }
+
+IDD_DIALOG DIALOG 0, 0, 300, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE
+CAPTION "B.I.Calendar: About..."
+FONT 9, "Arial"   
+BEGIN
+    CONTROL "Version:", IDC_TEXT2, "STATIC", SS_LEFT, 100, 50, 60, 15
+    CONTROL "Creation date:", IDC_TEXT3, "STATIC", SS_LEFT, 100, 80, 100, 15
+    CONTROL "Autor:", IDC_TEXT, "STATIC", SS_LEFT, 100, 110, 70, 15
+    CONTROL "0.1.6.310", IDC_TEXT5, "STATIC", SS_LEFT, 249, 50, 70, 15
+    CONTROL "02.01.2012   12:47", IDC_TEXT6, "STATIC", SS_LEFT, 205, 80, 130, 15
+    CONTROL "Igor Baklikov © 2011", ID_LINK, "BUTTON", BS_PUSHBUTTON | WS_TABSTOP | WS_GROUP, 185, 108, 110, 15
+    CONTROL "",-1, "STATIC", SS_BLACKFRAME, 5, 130, 290, 2
+    CONTROL "This program and all her parts are completely free!!!", IDC_TEXT7, "STATIC", SS_LEFT, 10, 137, 120, 20
+    CONTROL "ReadMe.txt", ID_AB, "BUTTON", BS_PUSHBUTTON | WS_TABSTOP | WS_GROUP, 140, 137, 70, 17
+    CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_TABSTOP, 220, 137, 70, 17
+END
+
+IDD_ERROR DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | DS_SETFOREGROUND | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE    
+CAPTION "B.I.Calendar: ERROR!!!"    
+FONT 8, "Arial"   
+BEGIN
+    CONTROL "This language has been selected! Please choose another one...", IDC_TEXT, "STATIC", SS_LEFT, 70, 12, 220, 40
+    CONTROL "",-1, "STATIC", SS_BLACKFRAME, 5, 54, 290, 1
+    CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_TABSTOP, 210, 59, 80, 17
+END
+
+IDD_WARNING DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | DS_SETFOREGROUND | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE    
+CAPTION "B.I.Calendar: WARNING!!!"
+FONT 8, "Arial"   
+BEGIN
+    CONTROL "One version of this application is already running!!!", IDC_TEXT, "STATIC", SS_LEFT, 75, 12, 200, 40
+    CONTROL "",-1, "STATIC", SS_BLACKFRAME, 5, 54, 290, 1
+    CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_TABSTOP, 210, 59, 80, 17
+END
+
+IDD_EEG DIALOG 0, 0, 300, 80
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_STATICEDGE    
+CAPTION "B.I.Calendar: EaStEr EgG_)))"    
+FONT 8, "Arial"   
+BEGIN
+    CONTROL "Today is autor`s birthday_)))", IDC_T, "STATIC", SS_LEFT, 77, 20, 270, 50
+    CONTROL "",-1, "STATIC", SS_BLACKFRAME, 5, 54, 290, 1
+    CONTROL "Hurray!!!", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_TABSTOP, 210, 59, 80, 17
+END
